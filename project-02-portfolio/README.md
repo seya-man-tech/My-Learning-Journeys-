@@ -1,16 +1,43 @@
-# React + Vite
+# My Learning Journeys
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome to my personal frontend development repository! This project serves as a dedicated showcase of my practical experience, experiments, and progress in building modern web applications.
 
-Currently, two official plugins are available:
+## Tech Stack & Tools
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Frontend Framework: React.js
+- Styling: Tailwind CSS
+- Build Tool: Vite
+- Version Control: Git & GitHub
 
-## React Compiler
+## Projects Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Project 01: Find Dream House (project-01-find-dream-house)
+- Description: A modern real estate application web interface designed for browsing and searching properties.
+- Key Features: Clean UI layout, property filtering concepts, and fully responsive design.
 
-## Expanding the Oxlint configuration
+### 2. Project 02: Portfolio (project-02-portfolio)
+- Description: A personal developer portfolio website highlighting projects, skills, and contact information.
+- Key Features: Modern UI, reusable React components, dynamic layouts, and smooth user interactions.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting Started Locally
+
+### Prerequisites
+Make sure you have Node.js installed on your machine.
+
+### Installation & Setup
+
+1. Clone the repository:
+   git clone [https://github.com/seya-man-tech/My-learning-Journeys.git](https://github.com/seya-man-tech/My-learning-Journeys.git)
+
+2. Navigate to the desired project folder:
+   cd My-learning-Journeys/project-02-portfolio
+
+3. Install dependencies:
+   npm install
+
+4. Start the development server:
+   npm run dev
+
+## Connect with Me
+
+- GitHub: @seya-man-tech
