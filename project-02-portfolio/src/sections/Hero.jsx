@@ -95,7 +95,7 @@ const Hero = () => {
       {/* Scroll Down */}
       <div className="absolute bottom-8 flex flex-col items-center gap-1 text-gray-400 text-xs animate-bounce cursor-pointer">
         <div className="w-5 h-8 border-2 border-gray-400 rounded-full flex justify-center pt-1">
-          <div className="w-1 h-2 bg-gray-400 rounded-full" />
+          <div className="w-1 h-2 bg-green-400 rounded-full" />
         </div>
         <span>Scroll Down</span>
       </div>

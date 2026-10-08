@@ -1,5 +1,6 @@
 
 const Experience = () => {
+
   const educationData = [
     {
       year: "2022 - Present",
