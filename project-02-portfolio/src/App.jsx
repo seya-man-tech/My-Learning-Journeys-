@@ -3,6 +3,7 @@ import Sidebar from "./component/Layout/Sidebar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Experience from "./sections/Experiance";
+import Works from "./sections/Works";
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -17,7 +18,8 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Experience/>
+        <Experience />
+        <Works/>
       </main>
     </div>
   );
