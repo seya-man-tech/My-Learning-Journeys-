@@ -1,16 +1,62 @@
-# React + Vite
+# React To-Do List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive, and modular To-Do List application built with React and Normal CSS to manage daily tasks efficiently.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- CRUD Operations: Add, update (edit), and delete tasks dynamically.
+- Task Completion Toggle: Mark tasks as completed or pending with visual strikethrough styling.
+- Filtering System: Filter tasks easily by status (All, Pending, Completed).
+- Live Statistics: Real-time counters showing total, completed, and remaining tasks.
+- Local Storage Persistence: Tasks are securely saved in the browser's local storage to persist across page reloads.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Frontend: React.js (Hooks: useState, useEffect)
+- Styling: Normal CSS (Component-specific stylesheets)
+- Build Tool: Vite
+- Version Control: Git & GitHub (Conventional Commits)
+
+---
+
+## Project Structure
+
+`text
+project-03-todolist/
+├── src/
+│   ├── components/
+│   │   ├── TaskFilters.jsx
+│   │   ├── TaskInput.jsx
+│   │   ├── TaskItem.jsx
+│   │   ├── TaskList.jsx
+│   │   └── TaskStats.jsx
+│   ├── styles/
+│   │   ├── App.css
+│   │   ├── TaskFilters.css
+│   │   ├── TaskInput.css
+│   │   ├── TaskItem.css
+│   │   ├── TaskStats.css
+│   │   └── global.css
+│   ├── App.jsx
+│   └── main.jsx
+├── README.md
+└── package.json
+Getting Started
+ Torun tis project locally , follow these steps:
+ 1.Clone the repository
+     git clone [https://github.com/seyaman-tech/My-Learning-Journeys-.git](https://github.com/seyaman-tech/My-Learning-Journeys-.git)
+
+2. Navigate to the project directory:
+     cd project-03-todolist
+3.instal dependencies:
+   npm install
+4. Run the development server
+     npm run dev
+Autho
+ Seid Muhdin 
+       And Github Account is 
+       https://github.com/seya-man-tech
