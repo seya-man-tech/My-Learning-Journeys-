@@ -1,0 +1,36 @@
+/* src/styles/TaskInput.css */
+.task-input-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.task-input:focus {
+  border-color: #667eea;
+}
+
+.task-add-btn {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-add-btn:hover {
+  background-color: #5a67d8;
+}

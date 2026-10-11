@@ -1,0 +1,18 @@
+/* src/styles/App.css */
+.todo-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  overflow: hidden;
+}
+
+.todo-header h1 {
+  font-size: 24px;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}

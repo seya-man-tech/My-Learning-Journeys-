@@ -1,0 +1,12 @@
+/* src/styles/TaskStats.css */
+.task-stats {
+  display: flex;
+  justify-content: space-between;
+  background: #edf2f7;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 15px;
+}
