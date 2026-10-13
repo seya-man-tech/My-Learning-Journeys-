@@ -1,0 +1,284 @@
+.header {
+ background-color: transparent;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  z-index: 1000;
+  width: 100%;
+  backdrop-filter: blur(3px);
+  transition: background-color 0.3s ease;
+}
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 36px;
+}
+
+.logo {
+  display: block;
+  flex: 0 0 auto;
+  width: 64px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.navLink {
+  color: #f5f5f5;
+  font-size: 11px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #b3b3b3;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchButton,
+.iconButton,
+.profileButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.searchButton {
+  width: 24px;
+  height: 30px;
+}
+
+.searchInput {
+  width: 190px;
+  padding: 7px 10px;
+  border: 1px solid #777;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f5f1;
+  font-size: 12px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: #f5f5f1;
+  outline: none;
+  background: #111;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+.searchButton:hover,
+.iconButton:hover,
+.profileButton:hover {
+  color: #d2d2d2;
+}
+
+.iconButton {
+  position: relative;
+  width: 24px;
+  height: 30px;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  border: 1px solid #050505;
+  border-radius: 999px;
+  background: #e50914;
+  color: #fff;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.profileContainer {
+  position: relative;
+}
+
+.profileButton {
+  gap: 7px;
+  min-height: 32px;
+}
+
+.userAvater {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background: #555;
+  color: #fff;
+}
+
+.profileMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 1001;
+  min-width: 124px;
+  padding: 4px 0;
+  border: 1px solid #303030;
+  border-radius: 3px;
+  background: rgba(20, 20, 20, 0.98);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.55);
+  animation: slideDown 0.2s ease-out;
+}
+
+.profileItem {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  border: 0;
+  background: transparent;
+  color: #f5f5f1;
+  cursor: pointer;
+  font-size: 11px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.profileItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: underline;
+}
+
+.profileDivider {
+  height: 1px;
+  margin: 4px 0;
+  border: 0;
+  background: #404040;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive  */
+@media (max-width: 900px) {
+  .container {
+    gap: 18px;
+    padding: 0 22px;
+  }
+
+  .nav {
+    gap: 12px;
+    overflow-x: auto;
+  }
+
+  .navLink {
+    font-size: 10px;
+  }
+
+  .rightSection {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .nav {
+    order: 3;
+    flex-basis: 100%;
+    padding-bottom: 3px;
+  }
+
+  .rightSection {
+    margin-left: auto;
+  }
+
+  .searchInput {
+    width: 140px;
+  }
+}
+
+@media (max-width: 250px) {
+  .container {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .logo {
+    width: 54px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .navLink {
+    font-size: 9px;
+  }
+
+  .rightSection {
+    gap: 8px;
+  }
+
+  .searchInput {
+    width: 90px;
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .userAvater {
+    width: 23px;
+    height: 23px;
+  }
+
+  .profileButton {
+    gap: 4px;
+  }
+}
