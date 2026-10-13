@@ -1,0 +1,69 @@
+.banner {
+ color: white;
+ object-fit: contain;
+ background-image: url("../../assets/image/banner.jpeg");
+ background-position: center center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 100%;
+}
+.Content {
+  padding-left: 15px;
+  padding-top: 330px;
+}
+.LogoImg {
+  width: 150px;
+ 
+}
+.Title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+.Description {
+  line-height: 1.3;
+  padding-top: 0.5rem;
+  font-size: 23px;
+  max-width: 760px;
+  height: 80px;
+}
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  background-color:white;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+ 
+}
+.button:hover {
+  color: white;
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: all 0.2s;
+}
+.fadebottom {
+  height: 11rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+  width: 100%;
+}
