@@ -35,6 +35,10 @@ function Banner(props) {
           backgroundImage: `url("${BANNER_BASE}${bannerImage.backdrop_path}")`,
         }}
       >
+
+
+
+        
         {" "}
         <div className={styles.Content}>
           {/* netflix image */}

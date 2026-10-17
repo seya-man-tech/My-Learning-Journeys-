@@ -68,6 +68,8 @@ function Header() {
                 className={styles.searchInput}
               />
             )}
+
+            
           </div>
           {/* notifications */}
           <button className={styles.iconButton}>
