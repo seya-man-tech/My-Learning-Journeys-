@@ -5,6 +5,8 @@ import { Search, Bell, User, ChevronDown } from "lucide-react";
 import logo from "../../assets/image/logo.png";
 import styles from "./Header.module.css";
 
+
+
 function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
