@@ -9,6 +9,10 @@ const footerLinks = [
   ["Media Centre", "Privacy", "Contact Us"],
 ];
 
+
+
+
+
 function Footer() {
   const socialLinks = [
     {
@@ -29,6 +33,8 @@ function Footer() {
     },
   ];
 
+
+  
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
