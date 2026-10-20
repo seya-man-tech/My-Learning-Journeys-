@@ -1,5 +1,7 @@
 import  { useEffect, useState } from "react";
 
+
+
 import SlideShow from '../SlideShow/SlideShow';
 import styles from './DisplayRow.module.css';
 // import { movies } from '../../Data/Data';
@@ -44,8 +46,6 @@ function DisplayRow() {
               romance: romanceRes.data.results,
               docmuntaries: docRes.data.results,
             });
-     
-    
         } catch (error) {
            console.log(error) 
         }
