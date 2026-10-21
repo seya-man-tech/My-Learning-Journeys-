@@ -9,6 +9,8 @@ import { movieInstance } from '../../Utility/MovieInstance';
 import requests from '../../Utility/requestUrls';
 function DisplayRow() {
 
+
+  
     const [movies, setMovies] = useState({
         trending: [],
         netflixOrginals: [],
