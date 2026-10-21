@@ -55,6 +55,7 @@ export const movies = [
     genres: ["Adventure", "Fantasy"],
     badge: "Recently added",
   },
+  
   {
     id: 5,
     title: "Champion",
