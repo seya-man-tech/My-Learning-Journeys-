@@ -51,4 +51,4 @@ A fully responsive, modern personal portfolio website built from scratch to show
 
 ## 🔗 Connect with Me
 
-* GitHub Profile: [Seid-Muhdin](https://github.com/seya-man-tech)
+* GitHub Profile: [(https://github.com/seya-man-tech)]
