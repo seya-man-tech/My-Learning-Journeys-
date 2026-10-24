@@ -32,7 +32,6 @@ function TaskItem({ task, toggleTask, deleteTask, editTask }) {
           <span className="task-text">{task.text}</span>
         )}
       </div>
-
       <div className="task-actions">
         {isEditing ? (
           <button onClick={handleUpdate} className="save-btn">Save</button>
