@@ -1,7 +1,5 @@
-// src/components/TaskFilters.jsx
 import React from "react";
 import "../styles/TaskFilters.css";
-
 function TaskFilters({ currentFilter, setFilter }) {
   return (
     <div className="task-filters">
