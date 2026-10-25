@@ -30,5 +30,4 @@ function TaskFilters({ currentFilter, setFilter }) {
     </div>
   );
 }
-
 export default TaskFilters;

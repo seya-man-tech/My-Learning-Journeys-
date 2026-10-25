@@ -1,10 +1,8 @@
 // src/components/TaskInput.jsx
 import React, { useState } from "react";
 import "../styles/TaskInput.css";
-
 function TaskInput({ addTask }) {
   const [inputTitle, setInputTitle] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!inputTitle.trim()) return; // Do nothing if input is empty
