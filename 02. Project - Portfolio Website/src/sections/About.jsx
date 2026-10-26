@@ -1,5 +1,4 @@
 
-
 const About = () => {
   const skills = [
     { name: 'HTML', percentage: '92%', color: 'bg-red-500' },
@@ -8,7 +7,6 @@ const About = () => {
     { name: 'figma', percentage: '83%', color: 'bg-cyan-400' },
     { name: 'adobe premiere pro', percentage: '87%', color: 'bg-blue-500' },
   ];
-
   const stats = [
     {
       icon: "/images/Vector (6).png",
