@@ -9,7 +9,6 @@ import {
   FileText,
   MessageSquare,
 } from "lucide-react";
-
 const navItems = [
   { id: "home", icon: Home, label: "Home" },
   { id: "about", icon: User, label: "About" },
@@ -38,7 +37,6 @@ function Sidebar({ activeSection, setActiveSection }) {
 
         {navItems.map((item) => {
           const Icon = item.icon;
-
           const isActive = activeSection === item.id;
 
           return (
