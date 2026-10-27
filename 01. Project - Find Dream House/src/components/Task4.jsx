@@ -55,8 +55,6 @@ function Task4() {
               alt={item.name}
               className="w-full h-44 object-cover"
             />
-
-            {/* Card Body */}
             <div className="p-5 flex-1 flex flex-col justify-between">
               {/* User Header Info */}
               <div className="flex items-center justify-between mb-4">
