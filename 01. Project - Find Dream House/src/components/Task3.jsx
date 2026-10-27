@@ -1,13 +1,11 @@
 import location from "/images/location.png";
 import room from "/images/rooms.png";
 import size from "/images/size.png";
-
-
  function Task3() {
   const residences = [
     {
       id: 1,
-      image: "/images/image (10) 2.png", // ወይም የራስህ የምስል ስም
+      image: "/images/image (10) 2.png", 
       location: "San Francisco, California",
       rooms: "4 Rooms",
       size: "3,500 sq ft",
@@ -38,7 +36,7 @@ import size from "/images/size.png";
         Our Popular Residences
       </h2>
 
-      {/* Cards Grid */}
+  
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {residences.map((item) => (
           <div
