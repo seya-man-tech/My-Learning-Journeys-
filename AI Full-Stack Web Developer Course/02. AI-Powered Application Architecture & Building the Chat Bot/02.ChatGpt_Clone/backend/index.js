@@ -14,7 +14,7 @@ async function startServer() {
   try {
       const connection = await db.getConnection();
       connection.release();
-    console.log("db connected");
+    console.log("database is connected successfully");
     app.listen(3004, (err) => {
       if (err) {
         throw err;
