@@ -2,14 +2,12 @@
 import "dotenv/config";
 import express from "express";
 import db from "./db/db.config.js";
-
+import { errorHandler } from "./src/middleware/error-handler.js";
+import mainRoutes from "./src/api/main.routes.js";
 const app = express();
-app.post("api/conversations", (req, res) => {
-    res.send("post methode");
-});
-app.get("api/conversations", (req, res) => {
-  res.send("get methode");
-});
+app.use(express.json());
+app.use("/api", mainRoutes);
+app.use(errorHandler);
 async function startServer() {
   try {
       const connection = await db.getConnection();
