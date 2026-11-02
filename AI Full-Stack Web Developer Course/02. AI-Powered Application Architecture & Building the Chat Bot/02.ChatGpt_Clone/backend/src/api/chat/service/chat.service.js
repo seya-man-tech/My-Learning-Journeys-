@@ -1,6 +1,9 @@
 import db from "../../../../db/db.config.js";
-const get
 
+const getRecentConversationsService = async (limit=5) => {
+    const [rows] = await db.execute("SELECT * FROM conversations ORDER BY created_at DESC LIMIT ?", [limit]);
+    return rows;
+};
 
 export async function createConversationService(question) {
     try {
