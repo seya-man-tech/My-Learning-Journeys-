@@ -1,6 +1,14 @@
+
+
 export const errorHandler = (err, req, res, next) => {
-    return res.status(err.status || 500).json({
-        success: false,
-        message: "somethng went wrong try again later",
-    });
-}
+
+  console.error("SERVER ERROR CAUGHT:", err);
+
+  const statusCode = err.statusCode || err.status || 500;
+  const message = err.message || "Something went wrong, try again later";
+
+  return res.status(statusCode).json({
+    success: false,
+    message: message,
+  });
+};
