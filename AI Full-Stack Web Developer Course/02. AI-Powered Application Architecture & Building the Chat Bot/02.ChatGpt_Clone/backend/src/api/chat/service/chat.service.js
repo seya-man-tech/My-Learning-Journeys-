@@ -28,15 +28,36 @@ const generateAssistanceAnswer = async ({ historyRows, question }) => {
     parts: [{ text: row.content }],
   }));
 
-
   const chat = createGenAIClient.chats.create({
     model: GEMINI_MODEL,
+    config: {
+      naxOutputTokens: 1024,
+    },
     history: formattedHistory,
   });
 
-    const result = await chat.sendMessage({ message: question });
-    console.log(result.usageMetadata);
-    return { text: result.text,totalTokens: result.usageMetadata.totalTokenCount };
+  const result = await chat.sendMessage({ message: question });
+  console.log(result.usageMetadata);
+  return {
+    text: result.text,
+    totalTokens: result.usageMetadata.totalTokenCount,
+  };
+};
+
+const getMessageById = async (messageId) => {
+  const [rows] = await db.execute(
+    `SELECT id, role, content, token_count, created_at FROM conversation WHERE id = ? LIMIT 1`,
+
+    [messageId],
+  );
+  if (!rows[0]) return null;
+  return {
+    id: rows[0].id,
+    role: rows[0].role,
+    content: rows[0].content,
+    token_count: rows[0].token_count || 0,
+    created_at: rows[0].created_at,
+  };
 };
 
 export async function createConversationService(question) {
@@ -49,25 +70,30 @@ export async function createConversationService(question) {
 
     const historyRows = await getRecentConversationsService(5);
 
-
     const [result] = await db.execute(
       `INSERT INTO conversation (content, role) VALUES (?, 'user')`,
       [question],
     );
- 
+
     const aiAnswer = await generateAssistanceAnswer({ historyRows, question });
 
-    
     await db.execute(
       `INSERT INTO conversation (content, role, token_count) VALUES (?, 'assistant', ?)`,
       [aiAnswer.text, aiAnswer.totalTokens],
     );
 
+    const userConversation = await getMessageById(result.insertId);
+    const assistanceConversation = await getMessageById(
+      createAssistanceMessageResult.insertId,
+    );
+
     return {
-      historyRows,
-      userQuestion: question,
-      assistantResponse: aiAnswer,
-      result,
+      userConversation,
+      assistanceConversation,
+      //   historyRows,
+      //   userQuestion: question,
+      //   assistantResponse: aiAnswer,
+      //   result,
     };
   } catch (error) {
     throw error;
