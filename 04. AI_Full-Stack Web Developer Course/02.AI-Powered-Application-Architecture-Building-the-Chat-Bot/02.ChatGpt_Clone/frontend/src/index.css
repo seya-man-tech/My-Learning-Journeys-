@@ -10,7 +10,6 @@
   --border-color: rgba(255, 255, 255, 0.1);
   --accent-color: #10a37f;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
