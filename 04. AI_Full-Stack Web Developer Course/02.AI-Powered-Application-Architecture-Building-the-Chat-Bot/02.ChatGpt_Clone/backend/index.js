@@ -5,11 +5,7 @@ import db from "./db/db.config.js";
 import { errorHandler } from "./src/middleware/error-handler.js";
 import mainRoutes from "./src/api/main.routes.js";
 const app = express();
-app.use(cors({
-  origin: " http://localhost:5173/",
-}
-
-));
+app.use(cors({ origin: "http://localhost:5173" }));
 
 
 

@@ -29,7 +29,10 @@ function App() {
     try {
       const response = await axios.get(`${API_BASE_URL}/chat/conversations`);
       if (response.data.success) {
-        setConversations(response.data.data.conversations);
+        if (!Array.isArray(response.data.data)) {
+          throw new TypeError("Expected conversation data to be an array.");
+        }
+        setConversations(response.data.data);
       }
     } catch (error) {
       console.error("Error fetching conversations:", error);
