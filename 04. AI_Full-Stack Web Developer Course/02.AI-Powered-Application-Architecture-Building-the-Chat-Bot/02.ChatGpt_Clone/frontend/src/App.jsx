@@ -94,7 +94,6 @@ function App() {
           isLoading={isLoading}
           messagesEndRef={messagesEndRef}
         />
-
         <ChatInput
           handleSendMessage={handleSendMessage}
           isLoading={isLoading}
@@ -103,5 +102,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
