@@ -7,16 +7,14 @@ import mainRoutes from "./src/api/main.routes.js";
 const app = express();
 app.use(cors({ origin: "http://localhost:5173" }));
 
-
-
 app.use(express.json());
 app.use("/api", mainRoutes);
 
 app.use(errorHandler);
 async function startServer() {
   try {
-      const connection = await db.getConnection();
-      connection.release();
+    const connection = await db.getConnection();
+    connection.release();
     console.log("database is connected successfully");
     app.listen(3004, (err) => {
       if (err) {
