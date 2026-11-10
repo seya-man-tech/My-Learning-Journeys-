@@ -6,10 +6,8 @@ import { errorHandler } from "./src/middleware/error-handler.js";
 import mainRoutes from "./src/api/main.routes.js";
 const app = express();
 app.use(cors({ origin: "http://localhost:5173" }));
-
 app.use(express.json());
 app.use("/api", mainRoutes);
-
 app.use(errorHandler);
 async function startServer() {
   try {
