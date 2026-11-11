@@ -14,11 +14,9 @@ function App() {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
   useEffect(() => {
     fetchConversations();
   }, []);
-
   useEffect(() => {
     scrollToBottom();
   }, [conversations, isLoading]);
