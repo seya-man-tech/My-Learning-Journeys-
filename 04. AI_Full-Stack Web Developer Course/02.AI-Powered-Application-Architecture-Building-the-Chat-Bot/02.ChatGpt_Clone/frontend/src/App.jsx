@@ -5,9 +5,7 @@ import ChatHeader from "./components/ChatHeader/ChatHeader";
 import MessageList from "./components/MessageList/MessageList";
 import ChatInput from "./components/ChatInput/ChatInput";
 import "./index.css";
-
 const API_BASE_URL = "http://localhost:3004/api";
-
 function App() {
   const [conversations, setConversations] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

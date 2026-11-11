@@ -24,5 +24,4 @@ async function startServer() {
     console.log("Error Starting Server:", error.message);
   }
 }
-
 startServer();
