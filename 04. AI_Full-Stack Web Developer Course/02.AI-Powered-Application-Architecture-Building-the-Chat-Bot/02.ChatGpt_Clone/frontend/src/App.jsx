@@ -10,7 +10,6 @@ function App() {
   const [conversations, setConversations] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -34,7 +33,6 @@ function App() {
       console.error("Error fetching conversations:", error);
     }
   };
-
   const handleSendMessage = async (question) => {
     // Optimistically add user message
     const tempUserMessage = {

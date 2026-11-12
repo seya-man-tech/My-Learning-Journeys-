@@ -1,7 +1,5 @@
 
-
 export const errorHandler = (err, req, res, next) => {
-
   console.error("SERVER ERROR CAUGHT:", err);
 
   const statusCode = err.statusCode || err.status || 500;
