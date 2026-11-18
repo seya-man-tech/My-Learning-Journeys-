@@ -56,19 +56,16 @@ body {
   background: #e8e8e8;
   color: #222;
 }
-
 .operator,
 .equal {
   background: #ffb84d;
   color: #111;
 }
-
 .clear,
 .delete {
   background: #b084f4;
   color: white;
 }
-
 .equal {
   grid-row: span 2;
   height: 100%;
