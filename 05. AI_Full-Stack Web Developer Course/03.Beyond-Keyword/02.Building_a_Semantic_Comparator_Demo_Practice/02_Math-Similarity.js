@@ -36,11 +36,12 @@ function cosineSimilarity(vecA, vecB) {
   // 1. Dot Product (multipy matching components and sum)
   let dotProduct = 0;
 
-    // // 2. Magnitude (Length of each vectors)
+    // 2. Magnitude (Length of each vectors)
     // let magnitudeA = 0;
     // let magnitudeB = 0;
     // for (let i = 0; i < vecA.length; i++) {
     //     dotProduct += vecA[i] * vecB[i];
+
     //     magnitudeA += vecA[i] * vecA[i];
     //     magnitudeB += vecB[i] * vecB[i];
     // }
@@ -52,16 +53,12 @@ function cosineSimilarity(vecA, vecB) {
 
 
 
-
-
-
   for (let i = 0; i < vecA.length; i++) {
     dotProduct += vecA[i] * vecB[i];
   }
   // 2. Magnitude (Length of each vectors)
   let magnitudeA = 0;
   let magnitudeB = 0;
-
   for (let i = 0; i < vecA.length; i++) {
     magnitudeA += vecA[i] * vecA[i];
   }
@@ -75,7 +72,6 @@ function cosineSimilarity(vecA, vecB) {
     if (magnitudeA == 0 || magnitudeB == 0) {
         return 0;
     }
-
   return dotProduct / (magnitudeA * magnitudeB);
 }
 // Example 1: Identical direction (Scaled up)
