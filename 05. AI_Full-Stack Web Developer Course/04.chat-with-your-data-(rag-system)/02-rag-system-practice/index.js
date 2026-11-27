@@ -11,22 +11,22 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3788;
 
-// // Allow cross-origin requests (e.g. from a frontend on a different port)
-// app.use(cors());
-// // Parse incoming JSON request bodies into req.body
+// Allow cross-origin requests (e.g. from a frontend on a different port)
+app.use(cors());
+// Parse incoming JSON request bodies into req.body
 app.use(express.json());
 // Parse URL-encoded form bodies (e.g. HTML form submissions)
 app.use(express.urlencoded({ extended: true }));
 
-// // Simple liveness probe to confirm the server is up
-// app.get('/health', (req, res) => {
-//   res.json({ status: 'ok', timestamp: new Date() });
-// });
+// Simple liveness probe to confirm the server is up
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date() });
+});
 
-// // Mount all feature routes under the /api prefix
-// app.use('/api', mainRouter);
-// // Centralized error handler must be registered LAST, after all routes
-// app.use(errorHandler);
+// Mount all feature routes under the /api prefix
+app.use('/api', mainRouter);
+// Centralized error handler must be registered LAST, after all routes
+app.use(errorHandler);
 
 // Verify the DB connection before accepting traffic, then start listening
 const startServer = async () => {
