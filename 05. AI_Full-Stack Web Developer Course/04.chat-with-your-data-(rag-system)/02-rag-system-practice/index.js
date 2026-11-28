@@ -2,8 +2,8 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import { db } from './db/db.config.js';
-// import { mainRouter } from './src/api/routes.js';
-// import { errorHandler } from './src/middleware/error-handler.js';
+import { mainRouter } from './src/api/routes.js';
+import { errorHandler } from './src/middleware/error-handler.js';
 
 // Load environment variables from .env into process.env
 dotenv.config();
